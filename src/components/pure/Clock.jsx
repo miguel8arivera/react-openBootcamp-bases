@@ -55,8 +55,12 @@ export const ClockHook = () => {
   const [fecha, setFecha] = useState(new Date());
   const [user, setUser] = useState(initialState);
   useEffect(() => {
+    setUser({
+      ...user,
+      edad: user.edad + 1,
+    });
     const timerID = setInterval(() => setFecha(new Date()), 1000);
-  });
+  }, []);
 
   return (
     <div>
@@ -67,7 +71,7 @@ export const ClockHook = () => {
       <h3>
         {user.nombre} {user.apellidos}
       </h3>
-      <h1>Edad: {user.edad}</h1>
+      <h1>{user.edad}</h1>
     </div>
   );
 

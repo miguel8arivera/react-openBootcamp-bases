@@ -22,7 +22,9 @@ function App() {
 
       {/* <GreetingStyled name="Kamila" /> */}
       {/* <Clock /> */}
-      <ClockHook />
+      {/*  <ClockHook /> */}
+
+      <TasklistComponent />
     </div>
   );
 }
